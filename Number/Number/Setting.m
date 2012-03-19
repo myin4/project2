@@ -16,7 +16,7 @@
     if (self) {
         // Custom initialization
         self.title = @"Setting";
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Setting" image: [UIImage imageNamed:@"icon/setting.png"] tag:3];
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Setting" image: [UIImage imageNamed:@"icon/setting.png"] tag: 4];
         self.tabBarItem = item;
         [item release];
     }

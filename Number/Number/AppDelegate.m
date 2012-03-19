@@ -53,9 +53,20 @@
         //north.navigationBar.tintColor = [UIColor greenColor];
         
         [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, setting, nil]];
-        
     }
-
+    
+    
+    Number *num = [[Number alloc] initWithNumber: 1 andStatus:1 andStartNotAppearDay: @"1/1/2012"];
+    Number *num1 = [[Number alloc] initWithNumber: 2 andStatus:2 andStartNotAppearDay: @"2/2/2012"];
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:num, num1, nil];
+    
+    [SaveArrayCustomObject saveObject: array key: @"num"];
+    
+    NSArray *arr = [SaveArrayCustomObject load: @"num"];    
+    
+    NSLog(@"\nNum: %@\n", arr);
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

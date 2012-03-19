@@ -20,6 +20,8 @@
 		2AC286C5151645F40034DC09 /* NorthNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286C4151645F40034DC09 /* NorthNumber.m */; };
 		2ADDA81A1517047500C3A881 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 2ADDA8191517047500C3A881 /* icon */; };
 		D5E69D6C151707C20092C82A /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D6B151707C20092C82A /* Setting.m */; };
+		D5E69D71151709DF0092C82A /* SaveArrayCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D70151709DF0092C82A /* SaveArrayCustomObject.m */; };
+		D5E69D7515170A040092C82A /* Number.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D7415170A040092C82A /* Number.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,10 @@
 		2ADDA8191517047500C3A881 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		D5E69D6A151707C20092C82A /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		D5E69D6B151707C20092C82A /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
+		D5E69D6F151709DF0092C82A /* SaveArrayCustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveArrayCustomObject.h; sourceTree = "<group>"; };
+		D5E69D70151709DF0092C82A /* SaveArrayCustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveArrayCustomObject.m; sourceTree = "<group>"; };
+		D5E69D7315170A040092C82A /* Number.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Number.h; sourceTree = "<group>"; };
+		D5E69D7415170A040092C82A /* Number.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Number.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		2AC28696151641780034DC09 /* Number */ = {
 			isa = PBXGroup;
 			children = (
+				D5E69D72151709F20092C82A /* Models */,
+				D5E69D6E151709BE0092C82A /* Helpers */,
 				2AC286B9151644140034DC09 /* iPad */,
 				2AC286B7151644020034DC09 /* iPhone */,
 				2AC2869F151641780034DC09 /* AppDelegate.h */,
@@ -137,6 +145,24 @@
 				2AC286B1151642DC0034DC09 /* ViewControlleriPad.m */,
 			);
 			name = iPad;
+			sourceTree = "<group>";
+		};
+		D5E69D6E151709BE0092C82A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D5E69D6F151709DF0092C82A /* SaveArrayCustomObject.h */,
+				D5E69D70151709DF0092C82A /* SaveArrayCustomObject.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D5E69D72151709F20092C82A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D5E69D7315170A040092C82A /* Number.h */,
+				D5E69D7415170A040092C82A /* Number.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +235,8 @@
 				2AC286C2151645D30034DC09 /* MainSecondNumber.m in Sources */,
 				2AC286C5151645F40034DC09 /* NorthNumber.m in Sources */,
 				D5E69D6C151707C20092C82A /* Setting.m in Sources */,
+				D5E69D71151709DF0092C82A /* SaveArrayCustomObject.m in Sources */,
+				D5E69D7515170A040092C82A /* Number.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
