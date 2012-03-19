@@ -78,13 +78,10 @@
         cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: reuseID] autorelease];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
-    
     Number *num = [self.num objectAtIndex: indexPath.row];
     cell.textLabel.text = num.num <=9 ? [NSString stringWithFormat: @"0%d", num.num] : [NSString stringWithFormat: @"%d", num.num];
-    
     return  cell;
 }
-
 
 - (void)viewDidUnload
 {
@@ -93,15 +90,11 @@
     // e.g. self.myOutlet = nil;
 }
 
-
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
-
 
 - (id)init
 {
