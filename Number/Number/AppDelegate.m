@@ -55,17 +55,74 @@
         [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, setting, nil]];
     }
     
+    //input data
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if(![defaults boolForKey: @"main"])
+    {
+        [defaults setBool:YES forKey: @"main"];
+        //prepare main list
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i<100; i++) {
+            
+            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay:@"01/01/2012"];
+            [array addObject: num];
+            [num release];
+            
+        }
+        
+        [SaveArrayCustomObject save: array key: @"main.array"];
+    }
     
-    Number *num = [[Number alloc] initWithNumber: 1 andStatus:1 andStartNotAppearDay: @"1/1/2012"];
-    Number *num1 = [[Number alloc] initWithNumber: 2 andStatus:2 andStartNotAppearDay: @"2/2/2012"];
+    if(![defaults boolForKey: @"sub"])
+    {
+        [defaults setBool:YES forKey: @"sub"];
+        //prepare main list
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i<100; i++) {
+            
+            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay:@"01/01/2012"];
+            [array addObject: num];
+            [num release];
+            
+        }
+        
+        [SaveArrayCustomObject save: array key: @"sub.array"];
+    }
     
-    NSMutableArray *array = [NSMutableArray arrayWithObjects:num, num1, nil];
     
-    [SaveArrayCustomObject saveObject: array key: @"num"];
+    if(![defaults boolForKey: @"main.sub"])
+    {
+        [defaults setBool:YES forKey: @"main.sub"];
+        //prepare main list
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i<100; i++) {
+            
+            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay:@"01/01/2012"];
+            [array addObject: num];
+            [num release];
+            
+        }
+        
+        [SaveArrayCustomObject save: array key: @"main.sub.array"];
+    }
     
-    NSArray *arr = [SaveArrayCustomObject load: @"num"];    
     
-    NSLog(@"\nNum: %@\n", arr);
+    if(![defaults boolForKey: @"north"])
+    {
+        [defaults setBool:YES forKey: @"north"];
+        //prepare main list
+        NSMutableArray *array = [NSMutableArray array];
+        for (int i = 0; i<100; i++) {
+            
+            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay:@"01/01/2012"];
+            [array addObject: num];
+            [num release];
+            
+        }
+        
+        [SaveArrayCustomObject save: array key: @"north.array"];
+    }
+    
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
