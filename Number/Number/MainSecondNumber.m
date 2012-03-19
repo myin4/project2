@@ -15,6 +15,9 @@
     self = [super init];
     if (self) {
         self.title = @"Main-Sub";
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Main-Sub" image: [UIImage imageNamed:@"icon/main.sub.png"] tag:2];
+        self.tabBarItem = item;
+        [item release];
     }
     return self;
 }

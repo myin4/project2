@@ -16,6 +16,9 @@
     if (self) {
         // Custom initialization
         self.title = @"North";
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"North" image: [UIImage imageNamed:@"icon/north.png"] tag:3];
+        self.tabBarItem = item;
+        [item release];
     }
     return self;
 }

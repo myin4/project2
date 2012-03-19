@@ -16,6 +16,9 @@
     if (self) {
         // Custom initialization
         self.title = @"Sub";
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Sub" image: [UIImage imageNamed:@"icon/sub.png"] tag:1];
+        self.tabBarItem = item;
+        [item release];
     }
     return self;
 }
