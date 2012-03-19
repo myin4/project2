@@ -10,13 +10,12 @@
 
 @implementation ViewControlleriPad
 
-
 - (id)init
 {
     self = [super init];
     if (self) {
         // Custom initialization
-        self.title = @"iPad";
+        self.title = @"Under Constructions";
     }
     return self;
 }
