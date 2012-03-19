@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Number.h"
 
 @interface SecondNumber : UIViewController
+{
+    NSMutableArray *num;
+}
 
+@property(nonatomic, retain) NSMutableArray *num;
 @end

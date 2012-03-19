@@ -9,18 +9,12 @@
 #import "MainNumber.h"
 
 @implementation MainNumber
+@synthesize num;
 
-- (id)init
+-(void)dealloc
 {
-    self = [super init];
-    if (self) {
-        // Custom initialization
-        self.title = @"Main";
-        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Main" image: [UIImage imageNamed:@"icon/main.png"] tag:0];
-        self.tabBarItem = item;
-        [item release];
-    }
-    return self;
+    [super dealloc];
+    self.num = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +32,59 @@
 {
     [super loadView];
     self.view.backgroundColor = [UIColor redColor];
+ 
+    self.num = [NSMutableArray arrayWithArray: [SaveArrayCustomObject load: @"main.array"] ];
+    NSLog(@"\nArray: %d\n", [self.num count]);
+    
+    UITableView *table = [[[UITableView alloc] initWithFrame: CGRectMake(0, 0, 320, 368)] autorelease];
+    [self.view addSubview: table];
+    table.delegate = self;
+    table.dataSource = self;
 }
+
+
+#pragma mark- UITableView Delegate
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return  44;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+}
+
+#pragma mark-UITableView Datasoure
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.num count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *reuseID = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: reuseID];
+    if(cell == nil)
+    {
+        cell = [[[UITableViewCell alloc] initWithStyle: UITableViewCellStyleDefault reuseIdentifier: reuseID] autorelease];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    }
+    
+    Number *num = [self.num objectAtIndex: indexPath.row];
+    cell.textLabel.text = num.num <=9 ? [NSString stringWithFormat: @"0%d", num.num] : [NSString stringWithFormat: @"%d", num.num];
+    
+    return  cell;
+}
+
 
 - (void)viewDidUnload
 {
@@ -47,10 +93,31 @@
     // e.g. self.myOutlet = nil;
 }
 
+
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
+
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        // Custom initialization
+        self.title = @"Main";
+        UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Main" image: [UIImage imageNamed:@"icon/main.png"] tag:0];
+        self.tabBarItem = item;
+        [item release];
+        
+    }
+    return self;
+}
+
+
+
 
 @end

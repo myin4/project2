@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Number.h"
 
-@interface MainNumber : UIViewController
+@interface MainNumber : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+    NSMutableArray *num;
+}
 
+@property(nonatomic, retain) NSMutableArray *num;
 @end

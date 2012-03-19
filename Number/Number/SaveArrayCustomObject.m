@@ -17,6 +17,7 @@
     NSData* data;
     data = [NSKeyedArchiver archivedDataWithRootObject:array];
     [defaults setObject:data forKey:key];
+    [defaults synchronize];
 }
 
 +(NSArray*)load:(NSString*)key
@@ -33,6 +34,7 @@
     NSData* data;
     data = [NSKeyedArchiver archivedDataWithRootObject:object];
     [defaults setObject:data forKey:key];
+    [defaults synchronize];
 }
 
 +(id)loadObject:(NSString*)key
