@@ -19,6 +19,7 @@
 		2AC286C2151645D30034DC09 /* MainSecondNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286C1151645D30034DC09 /* MainSecondNumber.m */; };
 		2AC286C5151645F40034DC09 /* NorthNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286C4151645F40034DC09 /* NorthNumber.m */; };
 		2ADDA81A1517047500C3A881 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 2ADDA8191517047500C3A881 /* icon */; };
+		D5E69D6C151707C20092C82A /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D6B151707C20092C82A /* Setting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		2AC286C3151645F40034DC09 /* NorthNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NorthNumber.h; sourceTree = "<group>"; };
 		2AC286C4151645F40034DC09 /* NorthNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NorthNumber.m; sourceTree = "<group>"; };
 		2ADDA8191517047500C3A881 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
+		D5E69D6A151707C20092C82A /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
+		D5E69D6B151707C20092C82A /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,8 @@
 				2AC286C1151645D30034DC09 /* MainSecondNumber.m */,
 				2AC286C3151645F40034DC09 /* NorthNumber.h */,
 				2AC286C4151645F40034DC09 /* NorthNumber.m */,
+				D5E69D6A151707C20092C82A /* Setting.h */,
+				D5E69D6B151707C20092C82A /* Setting.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -203,6 +208,7 @@
 				2AC286BF151645C60034DC09 /* SecondNumber.m in Sources */,
 				2AC286C2151645D30034DC09 /* MainSecondNumber.m in Sources */,
 				2AC286C5151645F40034DC09 /* NorthNumber.m in Sources */,
+				D5E69D6C151707C20092C82A /* Setting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "SecondNumber.h"
 #import "MainSecondNumber.h"
 #import "NorthNumber.h"
+#import "Setting.h"
 
 @class ViewControlleriPad;
 @class ViewControlleriPhone;

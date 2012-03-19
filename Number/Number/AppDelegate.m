@@ -48,7 +48,11 @@
         UINavigationController *north = [[[UINavigationController alloc] initWithRootViewController:northNum] autorelease];
         //north.navigationBar.tintColor = [UIColor greenColor];
         
-        [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, nil]];
+        Setting *settingNum = [[[Setting alloc] init] autorelease];
+        UINavigationController *setting = [[[UINavigationController alloc] initWithRootViewController:settingNum] autorelease];
+        //north.navigationBar.tintColor = [UIColor greenColor];
+        
+        [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, setting, nil]];
         
     }
 
