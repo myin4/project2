@@ -55,6 +55,10 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DetailView *detail = [[DetailView alloc] initWithString: [tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    [detail release];
     
 }
 
@@ -103,6 +107,15 @@
 }
 
 
+-(void)inputAction:(id)sender
+{
+    NSLog(@"\nInput\n");
+    
+    InputNumber *input = [[InputNumber alloc] initWithString:@"Main-Sub"];
+    [self.navigationController pushViewController: input animated:YES];
+    [input release];
+}
+
 
 - (id)init
 {
@@ -112,6 +125,10 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Main-Sub" image: [UIImage imageNamed:@"icon/main.sub.png"] tag:2];
         self.tabBarItem = item;
         [item release];
+        
+        UIBarButtonItem *inputButton = [[UIBarButtonItem alloc] initWithTitle: @"Input" style:UIBarButtonItemStylePlain target:self action:@selector(inputAction:)];
+        self.navigationItem.rightBarButtonItem = inputButton;
+        [inputButton release];
     }
     return self;
 }

@@ -9,12 +9,13 @@
 #import "MainNumber.h"
 
 @implementation MainNumber
-@synthesize num;
+@synthesize num, table;
 
 -(void)dealloc
 {
     [super dealloc];
     self.num = nil;
+    self.table = nil;
 }
 
 - (void)didReceiveMemoryWarning
@@ -36,12 +37,11 @@
     self.num = [NSMutableArray arrayWithArray: [SaveArrayCustomObject load: @"main.array"] ];
     NSLog(@"\nArray: %d\n", [self.num count]);
     
-    UITableView *table = [[[UITableView alloc] initWithFrame: CGRectMake(0, 0, 320, 368)] autorelease];
+    self.table = [[[UITableView alloc] initWithFrame: CGRectMake(0, 0, 320, 368)] autorelease];
     [self.view addSubview: table];
     table.delegate = self;
     table.dataSource = self;
 }
-
 
 #pragma mark- UITableView Delegate
 
@@ -54,6 +54,11 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DetailView *detail = [[DetailView alloc] initWithString: [tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    [detail release];
     
 }
 
@@ -96,6 +101,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+
+-(void)inputAction:(id)sender
+{
+    NSLog(@"\nInput\n");
+    
+    InputNumber *input = [[InputNumber alloc] initWithString:@"Main"];
+    [self.navigationController pushViewController: input animated:YES];
+    [input release];
+}
+
 - (id)init
 {
     self = [super init];
@@ -106,11 +121,13 @@
         self.tabBarItem = item;
         [item release];
         
+        UIBarButtonItem *inputButton = [[UIBarButtonItem alloc] initWithTitle: @"Input" style:UIBarButtonItemStylePlain target:self action:@selector(inputAction:)];
+        self.navigationItem.rightBarButtonItem = inputButton;
+        [inputButton release];
+        
+        
     }
     return self;
 }
-
-
-
 
 @end

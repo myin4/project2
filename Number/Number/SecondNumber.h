@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Number.h"
+#import "DetailView.h"
+#import "InputNumber.h"
 
 @interface SecondNumber : UIViewController
 {

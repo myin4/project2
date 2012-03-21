@@ -56,6 +56,11 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    DetailView *detail = [[DetailView alloc] initWithString: [tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    [detail release];
+    
 }
 
 #pragma mark-UITableView Datasoure
@@ -102,6 +107,14 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)inputAction:(id)sender
+{
+    NSLog(@"\nInput\n");
+    
+    InputNumber *input = [[InputNumber alloc] initWithString:@"North"];
+    [self.navigationController pushViewController: input animated:YES];
+    [input release];
+}
 
 
 - (id)init
@@ -113,6 +126,10 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"North" image: [UIImage imageNamed:@"icon/north.png"] tag:3];
         self.tabBarItem = item;
         [item release];
+        
+        UIBarButtonItem *inputButton = [[UIBarButtonItem alloc] initWithTitle: @"Input" style:UIBarButtonItemStylePlain target:self action:@selector(inputAction:)];
+        self.navigationItem.rightBarButtonItem = inputButton;
+        [inputButton release];
     }
     return self;
 }

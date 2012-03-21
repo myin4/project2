@@ -18,6 +18,8 @@
 		2AC286BF151645C60034DC09 /* SecondNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286BE151645C60034DC09 /* SecondNumber.m */; };
 		2AC286C2151645D30034DC09 /* MainSecondNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286C1151645D30034DC09 /* MainSecondNumber.m */; };
 		2AC286C5151645F40034DC09 /* NorthNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC286C4151645F40034DC09 /* NorthNumber.m */; };
+		2ADA9FF51518A9C700EAD061 /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADA9FF41518A9C700EAD061 /* DetailView.m */; };
+		2ADAA0031518AD3C00EAD061 /* InputNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ADAA0021518AD3C00EAD061 /* InputNumber.m */; };
 		2ADDA81A1517047500C3A881 /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 2ADDA8191517047500C3A881 /* icon */; };
 		D5E69D6C151707C20092C82A /* Setting.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D6B151707C20092C82A /* Setting.m */; };
 		D5E69D71151709DF0092C82A /* SaveArrayCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E69D70151709DF0092C82A /* SaveArrayCustomObject.m */; };
@@ -45,6 +47,10 @@
 		2AC286C1151645D30034DC09 /* MainSecondNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainSecondNumber.m; sourceTree = "<group>"; };
 		2AC286C3151645F40034DC09 /* NorthNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NorthNumber.h; sourceTree = "<group>"; };
 		2AC286C4151645F40034DC09 /* NorthNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NorthNumber.m; sourceTree = "<group>"; };
+		2ADA9FF31518A9C700EAD061 /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		2ADA9FF41518A9C700EAD061 /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
+		2ADAA0011518AD3C00EAD061 /* InputNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputNumber.h; sourceTree = "<group>"; };
+		2ADAA0021518AD3C00EAD061 /* InputNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputNumber.m; sourceTree = "<group>"; };
 		2ADDA8191517047500C3A881 /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; path = icon; sourceTree = "<group>"; };
 		D5E69D6A151707C20092C82A /* Setting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting.h; sourceTree = "<group>"; };
 		D5E69D6B151707C20092C82A /* Setting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting.m; sourceTree = "<group>"; };
@@ -134,6 +140,10 @@
 				2AC286C4151645F40034DC09 /* NorthNumber.m */,
 				D5E69D6A151707C20092C82A /* Setting.h */,
 				D5E69D6B151707C20092C82A /* Setting.m */,
+				2ADA9FF31518A9C700EAD061 /* DetailView.h */,
+				2ADA9FF41518A9C700EAD061 /* DetailView.m */,
+				2ADAA0011518AD3C00EAD061 /* InputNumber.h */,
+				2ADAA0021518AD3C00EAD061 /* InputNumber.m */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -237,6 +247,8 @@
 				D5E69D6C151707C20092C82A /* Setting.m in Sources */,
 				D5E69D71151709DF0092C82A /* SaveArrayCustomObject.m in Sources */,
 				D5E69D7515170A040092C82A /* Number.m in Sources */,
+				2ADA9FF51518A9C700EAD061 /* DetailView.m in Sources */,
+				2ADAA0031518AD3C00EAD061 /* InputNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +271,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Quang Nguyen Xuan (P5U8ZDAZBR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Quang Nguyen Xuan (P5U8ZDAZBR)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -274,6 +287,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "EA4F04D8-B91F-47DB-9712-E0EEE8792CF5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA4F04D8-B91F-47DB-9712-E0EEE8792CF5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,7 +299,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Quang Nguyen Xuan (P5U8ZDAZBR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Quang Nguyen Xuan (P5U8ZDAZBR)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -293,6 +309,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "EA4F04D8-B91F-47DB-9712-E0EEE8792CF5";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EA4F04D8-B91F-47DB-9712-E0EEE8792CF5";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

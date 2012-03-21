@@ -53,8 +53,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DetailView *detail = [[DetailView alloc] initWithString: [tableView cellForRowAtIndexPath:indexPath].textLabel.text];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+    [detail release];
     
 }
 
@@ -102,6 +106,15 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(void)inputAction:(id)sender
+{
+    NSLog(@"\nInput\n");
+    
+    InputNumber *input = [[InputNumber alloc] initWithString:@"Sub"];
+    [self.navigationController pushViewController: input animated:YES];
+    [input release];
+}
+
 
 
 - (id)init
@@ -113,6 +126,10 @@
         UITabBarItem *item = [[UITabBarItem alloc] initWithTitle:@"Sub" image: [UIImage imageNamed:@"icon/sub.png"] tag:1];
         self.tabBarItem = item;
         [item release];
+        
+        UIBarButtonItem *inputButton = [[UIBarButtonItem alloc] initWithTitle: @"Input" style:UIBarButtonItemStylePlain target:self action:@selector(inputAction:)];
+        self.navigationItem.rightBarButtonItem = inputButton;
+        [inputButton release];
     }
     return self;
 }

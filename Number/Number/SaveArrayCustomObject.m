@@ -41,9 +41,8 @@
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
     NSData* cate = [defaults objectForKey:key];    
-    id *object = [[NSKeyedUnarchiver unarchiveObjectWithData:cate] retain];
+    id object = [[NSKeyedUnarchiver unarchiveObjectWithData:cate] retain];
     return [object autorelease];
 }
-
 
 @end

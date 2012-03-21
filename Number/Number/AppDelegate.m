@@ -52,7 +52,7 @@
         UINavigationController *setting = [[[UINavigationController alloc] initWithRootViewController:settingNum] autorelease];
         //north.navigationBar.tintColor = [UIColor greenColor];
         
-        [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, setting, nil]];
+        [((UITabBarController*)self.viewController) setViewControllers: [NSArray arrayWithObjects:main, second, mainSecond, north, nil]];
     }
     
     //input data
@@ -88,7 +88,7 @@
         
         [SaveArrayCustomObject save: array key: @"sub.array"];
     }
-    
+
     
     if(![defaults boolForKey: @"main.sub"])
     {
@@ -97,7 +97,7 @@
         NSMutableArray *array = [NSMutableArray array];
         for (int i = 0; i<100; i++) {
             
-            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay:@"01/01/2012"];
+            Number *num = [[Number alloc] initWithNumber: i andStatus:0 andStartNotAppearDay: [[NSDate date] string]];
             [array addObject: num];
             [num release];
             
